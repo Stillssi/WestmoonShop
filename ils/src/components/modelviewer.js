@@ -1,6 +1,4 @@
-import Model from "../assets/3d.png"
-
-const ModelViewer = () =>{
+const ModelViewer = ({Model}) =>{
     return(
         <img src={Model} style={{width: "400px"}} alt="modelviewer" />
     )

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import ModelViewer from "./modelviewer"
-
-const BrandTitle = styled.div`
+import Model from "../assets/3d1.png" 
+export const BrandTitle = styled.div`
 font-family: var(--font-googleLeagueSpartan);
 font-weight: 800;
 font-size: 80px;
@@ -9,14 +9,15 @@ color: #514949;
 line-height: 92px;
 `
 
-const SubInfo = styled.div`
+export const SubInfo = styled.div`
 font-weight: 700;
 font-size: 25px;
 line-height: 28px;
+margin-bottom: 0.5rem;
 color: rgba(81, 73, 73, 0.43);
 `
 
-const TextInfo = styled.div`
+export const TextInfo = styled.div`
 font-weight: 600;
 font-size: 20px;
 line-height: 28px;
@@ -25,7 +26,7 @@ p{
     margin: 0;
 }
 `
-const BrandWrapper = styled.div`
+export const BrandWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -33,7 +34,7 @@ const BrandWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 120px;
-
+  margin-bottom: 1rem;
   @media screen and (max-width: 768px) {
     flex-direction: column;
     justify-content: flex-start;
@@ -53,7 +54,7 @@ text-align: left;
   }
 `
 
-const MoreViewBtn = styled.button`
+export const MoreViewBtn = styled.button`
 border: 0;
 background-color: #1277C0;
 width: 250px;
@@ -64,9 +65,9 @@ color: white;
 font-weight: 600;
 margin-top: 50px;
 `
-const ViewBtn = () =>{
+export const ViewBtn = (color) =>{
     return(
-        <MoreViewBtn>View More →</MoreViewBtn>
+        <MoreViewBtn style={{backgroundColor: }}>View More →</MoreViewBtn>
     )
 }
 const Tfitness = () => {
@@ -84,7 +85,7 @@ const Tfitness = () => {
             </InfoWrapper>
             
             <div>
-                <ModelViewer />
+                <ModelViewer Model={Model}/>
             </div>
         </BrandWrapper>
     )
